@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/fragment_monument_detail__coordinator_lyt"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.fragments.MonumentDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/fragment_monument_detail__constraint_lyt__app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/fragment_monument_detail__constraint_lyt__collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorToolbarBackGround"
+            app:expandedTitleTextAppearance="@style/ExpandedToolbar"
+            app:collapsedTitleTextAppearance="@style/CollapsedToobar"
+            app:expandedTitleMarginStart="8dp"
+            app:expandedTitleMarginEnd="64dp"
+            app:title="@string/app_name">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/fragment_monument_detail_pager_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/fragment_monument_detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/monument_menu"
+                app:title="Detail"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_monument__detail_nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".ui.fragments.MonumentDetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_monument_detail__constraint_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fragment_monument_detail__title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp27"
+                tools:text="La Giralda"
+                android:textColor="@color/color_black"
+                android:layout_marginStart="@dimen/dimen_monument_row_margin"
+                android:layout_marginTop="@dimen/dimen_monument_row_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/fragment_monument_detail__city"/>
+
+            <TextView
+                android:id="@+id/fragment_monument_detail__city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp5"
+                android:layout_marginStart="@dimen/dimen_monument_row_margin"
+                android:layout_marginBottom="@dimen/dimen_monument_row_margin"
+                tools:text="Sevilla"
+                app:layout_constraintTop_toBottomOf="@id/fragment_monument_detail__title"
+                app:layout_constraintBottom_toTopOf="@id/fragment_monument_detail__description"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+            <ImageView
+                android:id="@+id/fragment_monument_detail__info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info"
+                android:layout_marginHorizontal="9dp"
+                android:layout_marginTop="@dimen/dimen_monument_row_margin"
+                app:layout_constraintTop_toTopOf="@id/fragment_monument_detail__title"
+                app:layout_constraintEnd_toStartOf="@id/fragment_monument_detail_fav"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:id="@+id/fragment_monument_detail_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_monument_row_margin"
+                android:src="@drawable/ic_start_not_favicon"
+                app:layout_constraintTop_toTopOf="@id/fragment_monument_detail__title"
+                app:layout_constraintEnd_toEndOf="@id/fragment_monument_detail__description"
+                tools:ignore="ContentDescription"  />
+
+            <TextView
+                android:id="@+id/fragment_monument_detail__description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_goneMarginTop="@dimen/dimen_monument_row_margin"
+                android:layout_marginStart="@dimen/dimen_monument_row_margin"
+                android:layout_marginEnd="@dimen/dimen_monument_row_margin"
+                android:textSize="@dimen/dp5"
+                tools:text="@string/general__loren"
+                app:layout_constraintTop_toBottomOf="@id/fragment_monument_detail__city"
+                app:layout_constraintBottom_toTopOf="@id/fragment_monument_detail__map_fragment"/>
+
+            <!--Map-->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_monument_detail__map_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="@dimen/dimen_monument_row_margin"
+                android:configChanges="orientation|screenSize"
+                app:layout_constraintTop_toBottomOf="@id/fragment_monument_detail__description"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

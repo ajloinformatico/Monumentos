@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base MonumentApplication theme. -->
+    <!-- Personal Style for the app-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_toolbar_back_ground</item>
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+
+        <!--set burger style-->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+        <!--to set my own actionBar-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!--Snack color-->
+        <item name="snackbarButtonStyle">@style/snackbarAction</item>
+    </style>
+
+    <!--Snackbar style-->
+    <style name="snackbarAction" parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <!--Burger button style-->
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorWhite</item>
+    </style>
+
+
+    <!--Monument detail collapse and spand styles-->
+    <style name="ExpandedToolbar" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/color_trasparent</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="CollapsedToobar" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/dp5</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+</resources>

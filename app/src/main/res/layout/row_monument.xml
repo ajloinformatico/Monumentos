@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/monument_row__linear_lyt"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/monument_row__card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_monument_row_margin"
+        android:background="@color/color_monument_row__background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/monument_row__card_view__constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/monument_row__card_view__image"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/ic_loading"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/my_monuments__title" />
+
+            <TextView
+                android:id="@+id/monument_row__card_view__monument_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_monument_row_margin"
+                android:layout_marginTop="@dimen/dimen_monument_row_margin"
+                android:textSize="@dimen/sp27"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/monument_row__card_view__city_txt"
+                app:layout_constraintEnd_toStartOf="@id/monument_row__card_view_start"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/monument_row__card_view__image"
+                tools:text="La Alhambra" />
+
+            <ImageView
+                android:id="@+id/monument_row__card_view_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_monument_row_margin"
+                android:layout_marginEnd="@dimen/dimen_monument_row_margin"
+                android:src="@drawable/ic_start_not_favicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/monument_row__card_view__city_txt"
+                app:layout_constraintTop_toBottomOf="@id/monument_row__card_view__image"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/monument_row__card_view__city_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_monument_row_margin"
+                android:layout_marginEnd="289dp"
+                android:layout_marginBottom="@dimen/dimen_monument_row_margin"
+                android:textSize="@dimen/dp5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/monument_row__card_view__monument_txt"
+                tools:text="Granada" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

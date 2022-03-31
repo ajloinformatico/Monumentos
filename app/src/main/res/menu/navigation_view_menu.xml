@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/monumentListFragment"
+        android:title="@string/monument_list__title"
+        />
+    <item
+        android:id="@+id/monumentFavoritesFragment"
+        android:title="@string/monument_favorites__titles"
+        />
+    <item
+        android:id="@+id/myMonumentsFragment"
+        android:title="@string/my_monuments__title"
+        />
+    </group>
+</menu>

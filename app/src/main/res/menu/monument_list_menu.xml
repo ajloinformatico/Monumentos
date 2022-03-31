@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/monument_list_menu__order"
+        android:title="@string/monument_list_toolbar__order"
+        android:icon="@drawable/ic_order_icon"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/monument_list_menu_order_by_id"
+                android:title="@string/monument_list_order_by_id"
+                />
+            <item
+                android:id="@+id/monument_list_menu_order_by_name"
+                android:title="@string/monument_list_order_by_name"
+                />
+            <item
+                android:id="@+id/monument_list_menu__order_by_north_south"
+                android:title="@string/monument_list_order_by_north_south"
+                />
+            <item android:id="@+id/monument_list_menu__order_by_east_west"
+                android:title="@string/monument_list_order_by_east_west"
+                />
+        </menu>
+    </item>
+
+</menu>

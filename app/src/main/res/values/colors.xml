@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorToolbarBackGround">#FFC0CCDA</color>
+    <color name="color_toolbar_back_ground">#1E2D3E</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="color_black">#000000</color>
+    <color name="color_navigaion_view__body_background">#1E2D3E</color>
+    <color name="color_navigaion_view__header_background">#263445</color>
+    <color name="color_monument_row__background">#FFEFF2F7</color>
+    <color name="color_monument_row__city_txt">#8492A6</color>
+    <color name="color_trasparent">#00000000</color>
+    <color name="color_float_action_button">#5A6978</color>
+</resources>

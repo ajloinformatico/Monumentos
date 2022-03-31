@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--width and height-->
+    <dimen name="dimen_toolbar_small_height">84dp</dimen>
+    <!--navigation view header-->
+    <dimen name="dimen_navigation_view__header_height">222dp</dimen>
+    <dimen name="dimen_navigation_view__width">456dp</dimen>
+    <dimen name="dimen_monument_row_margin">15dp</dimen>
+
+    <!--font size-->
+    <dimen name="sp27">27sp</dimen>
+    <dimen name="dp5">21sp</dimen>
+    <dimen name="sp5">5dp</dimen>
+    <dimen name="sp15">15sp</dimen>
+    <dimen name="dp9">9dp</dimen>
+
+</resources>

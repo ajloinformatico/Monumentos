@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/monumentListFragment">
+
+    <fragment
+        android:id="@+id/monumentListFragment"
+        android:name="es.sdos.formacion.monumentosandaluces.ui.fragments.MonumentListFragment"
+        android:label="@string/monument_list__title"
+        tools:layout="@layout/fragment_monument_list">
+        <action
+            android:id="@+id/action_monumentListFragment_to_monumentDetailFragment"
+            app:destination="@id/monumentDetailFragment"/>
+        <action
+            android:id="@+id/action_monumentListFragment_to_allMonumentsMapFragment"
+            app:destination="@id/allMonumentsMapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/monumentDetailFragment"
+        android:name="es.sdos.formacion.monumentosandaluces.ui.fragments.MonumentDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_monument_detail">
+
+        <argument
+            android:name="monument_id"
+            app:argType="long"
+            android:defaultValue="1L" />
+        <action
+            android:id="@+id/action_monumentDetailFragment_to_monumentWebViewFragment"
+            app:destination="@id/monumentWebViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/allMonumentsMapFragment"
+        android:name="es.sdos.formacion.monumentosandaluces.ui.fragments.AllMonumentsMapFragment"
+        android:label="@string/monument_map__title"
+        android:layout="@layout/fragment_all_monuments_map">
+        <action
+            android:id="@+id/action_allMonumentsMapFragment_to_monumentDetailFragment"
+            app:destination="@id/monumentDetailFragment" />
+        <action
+            android:id="@+id/action_allMonumentsMapFragment_to_addMonumentFragment"
+            app:destination="@id/addMonumentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monumentFavoritesFragment"
+        android:name="es.sdos.formacion.monumentosandaluces.ui.fragments.MonumentFavoritesFragment"
+        android:label="@string/monument_favorites__titles"
+        tools:layout="@layout/fragment_monument_favorites">
+        <action
+            android:id="@+id/action_monumentFavoritesFragment_to_monumentDetailFragment"
+            app:destination="@id/monumentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myMonumentsFragment"
+        android:name="es.sdos.formacion.monumentosandaluces.ui.fragments.MyMonumentsFragment"
+        android:label="@string/my_monuments__title"
+        tools:layout="@layout/fragment_my_monuments" >
+        <action
+            android:id="@+id/action_myMonumentsFragment_to_monumentDetailFragment"
+            app:destination="@id/monumentDetailFragment" />
+        <action
+            android:id="@+id/action_myMonumentsFragment_to_addMonumentFragment"
+            app:destination="@id/addMonumentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addMonumentFragment"
+        android:name="es.sdos.formacion.monumentosandaluces.ui.fragments.AddMonumentFragment"
+        android:label="@string/add_monument__title"
+        tools:layout="@layout/fragment_add_monument">
+
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_addMonumentFragment_to_allMonumentsMapFragment"
+            app:destination="@id/allMonumentsMapFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/monumentWebViewFragment"
+        android:name="es.sdos.formacion.monumentosandaluces.ui.fragments.MonumentWebViewFragment"
+        android:label="fragment_monument_web_view"
+        tools:layout="@layout/fragment_monument_web_view" >
+        <argument
+            android:name="monument_url"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/navigation_view__header_lyt"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_navigation_view__header_height"
+    android:background="@color/color_navigaion_view__header_background">
+
+    <TextView
+        android:id="@+id/navigation_view_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp27"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/navigation_view_subtitle_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_company"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dp5"
+        app:layout_constraintStart_toStartOf="@id/navigation_view_title_text"
+        app:layout_constraintTop_toBottomOf="@id/navigation_view_title_text"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/like_and_my_monument_row__lyt"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/like_and_my_monument_row__cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/color_trasparent"
+        app:cardElevation="0dp"
+        android:layout_margin="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/like_and_my_monument_row__constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/like_and_my_monument_row__image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_loading"
+                android:layout_marginEnd="@dimen/dimen_monument_row_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/like_and_my_monument_row__name"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/like_and_my_monument_row__name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="@string/app_name"
+                android:textSize="@dimen/dp5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/like_and_my_monument_row__image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/like_and_my_monument_row__description"/>
+
+            <TextView
+                android:id="@+id/like_and_my_monument_row__description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="@string/general__loren_small"
+                android:layout_marginStart="@dimen/dimen_monument_row_margin"
+                app:layout_constraintTop_toBottomOf="@id/like_and_my_monument_row__name"
+                app:layout_constraintStart_toEndOf="@id/like_and_my_monument_row__image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/like_and_my_monument_row__image"/>
+
+            <!--Border button-->
+            <View
+                android:id="@+id/border_bottom"
+                android:background="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginTop="15sp"
+                app:layout_constraintTop_toBottomOf="@id/like_and_my_monument_row__image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/like_and_my_monument_row__image"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

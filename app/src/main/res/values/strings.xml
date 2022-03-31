@@ -1,0 +1,102 @@
+<resources>
+
+    <string name="app_name">Monuments App</string>
+    <string name="app_company">Powered by SDOS</string>
+
+    <!--Accessibility -->
+    <string name="drawer__open">Side menu open</string>
+    <string name="drawer__closed">Side menu closed</string>
+    <string name="activity_main__float_btn_from_main_to_map">open map fragment</string>
+    <string name="activity_main__float_btn_from_map_to_main">back to main</string>
+
+    <!--General-->
+    <string name="general__back_main">Back</string>
+    <string name="general__loren_small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat velit a risus scelerisque, sit amet pharetra orci porta.</string>
+    <string name="fab__ad_monument">Add new monument</string>
+    <string name="general__scroll">Scroll  for the map fragment</string>
+
+    <!--Toolbar-->
+    <string name="monument_list_toolbar__delete">Delete</string>
+    <string name="monument_list_toolbar__share">Share</string>
+    <string name="monument_list_toolbar__maps">Maps</string>
+    <string name="monument_list_toolbar__order">Order</string>
+
+    <!--Add Monument-->
+    <string name="add_monument__name">Name</string>
+    <string name="add_monument__description">Description</string>
+    <string name="add_monument__city_label">City</string>
+    <string name="add_monument__map_label">Location</string>
+    <string name="add_monument__btn__add">Add</string>
+    <string name="add_monument__images_to_add">Images to add</string>
+    <string name="add_monument__images_label">Images</string>
+    <string name="add_monument__url_extra_information_label">Url extra information</string>
+
+
+    <!--label titles-->
+    <string name="monument_list__title">Monuments</string>
+    <string name="monument_detail__title">Monument Detail</string>
+    <string name="monument_map__title">Maps</string>
+    <string name="my_monuments__title">My Monuments</string>
+    <string name="monument_favorites__titles">Favorites</string>
+    <string name="add_monument__title">New Monument</string>
+
+    <!--Monument detail menu-->
+    <string name="monument_list_order_by_id">Order by id</string>
+    <string name="monument_list_order_by_name">Order by name</string>
+    <string name="monument_list_order_by_east_west">Order by east-west</string>
+    <string name="monument_list_order_by_north_south">Order by north-south</string>
+    <string name="monument_menu__options_block">title</string>
+    <string name="cancel">Cancel</string>
+
+    <!--Dialogs strings-->
+    <string name="monument_list__alert_message">Select one option</string>
+    <string name="monument_common__alert_title">Monument options</string>
+    <string name="monument_common__delete">Delete</string>
+    <string name="monument_common__open">Open</string>
+    <string name="monument_add__image_intent_title">Images options</string>
+    <string name="monument_add__open_camera">Camera</string>
+    <string name="monument_add__open_gallery">Gallery</string>
+    <string name="monument_detail__delete_dialog_title">Delete monument</string>
+    <string name="monument_detail__delete_dialog_message">Are you sure</string>
+    <string name="monument_detail__delete_dialog_action_yes">Yes</string>
+    <string name="monument_detail__delete_dialog_action_no">No</string>
+
+    <!--Snack bar strings-->
+    <string name="monument_common__snackbar_delete">Are you sure you want to delete ?</string>
+    <!--Permission-->
+    <string name="user_location_denied">Can we access your location</string>
+    <string name="map_load_user_location">Your location</string>
+
+    <!--Send mail-->
+    <string name="monument_detail__email_subject">PASS STORY</string>
+    <string name="monument_detail__email_message">Did you know that the monument %1$s is located in
+        the province of ProvinciaMonumento.</string>
+    <string name="monument_detail__email_uri_parse">mailto:</string>
+
+    <!--Database-->
+    <string name="database__name">monuments_database</string>
+
+    <!--Map-->
+    <string name="monument_detail__map_uri">geo:%1$s, %2$s</string>
+
+    <!--Extra-->
+    <string name="general__loren">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s
+    orem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s
+    orem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="monument_detail__info_btn">Open monument detail</string>
+    <string name="monument_detail__favorite_btn">Set favorite</string>
+    <string name="my_monuments__no_monuments_text">you have not added any monument yet</string>
+    <string name="monument_list_favorites__no_monuments_text">" You don't like any monument yet"</string>
+
+</resources>
